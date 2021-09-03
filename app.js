@@ -13,7 +13,6 @@ const yaml = require('js-yaml');
 const addShutdown = require('http-shutdown');
 const path = require('path');
 
-
 /**
  * Creates an express app and initialises it
  *
