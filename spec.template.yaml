@@ -320,6 +320,23 @@ paths:
           request: {}
           response:
             status: 301
+  # from routes/hello.js
+  /hello:
+    get:
+      tags:
+        - Hello World
+      description: Hello world endpoint
+      responses:
+        200:
+          description: OK
+      x-amples:
+        - title: helloworld endpoint
+          request: {}
+          response:
+            status: 200
+            headers:
+              content-type: application/json
+
   # from routes/ex.js
   /ex/err/array:
     get:
