@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: example-api
+  description: an explample node api
+  tags:
+    - rest
+spec:
+  type: openapi
+  lifecycle: production
+  owner: Platform Engineering Team
+  definition:
+    $text: ./spec.template.yaml
