@@ -1,8 +1,9 @@
+# This file is for publishing the Example Node API in the API Catalog
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: example-api
-  description: an explample node api
+  description: an example node api
   tags:
     - rest
 spec:
@@ -10,4 +11,4 @@ spec:
   lifecycle: production
   owner: Platform Engineering Team
   definition:
-    $text: ./spec.template.yaml
+    $text: ./spec.yaml
