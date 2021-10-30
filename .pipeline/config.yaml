@@ -3,3 +3,31 @@ pipelines:
     blubberfile: blubber.yaml
     stages: # run API tests
       - name: test
+  rehearse:
+    blubberfile: blubber.yaml
+    stages:
+      - name: test # run API tests
+      - name: candidate # build Docker image and publish to WMF registry
+        build: production
+        publish:
+          image: true
+      - name: rehearsal # deploy to staging cluster
+        deploy:
+          test: false
+          chart:
+            name: 'example-node-api'
+          image: '${candidate.imageName}'
+          tag: '${candidate.imageTag}'
+  publish:
+    blubberfile: blubber.yaml
+    stages:
+      - name: candidate # build Docker image and publish to WMF registry
+        build: production
+        publish:
+          image: true
+      - name: production # open patch to upgrade image version in helm chart
+        publish:
+          image:
+            id: '${candidate.imageID}'
+        promote:
+          - chart: example-node-api
