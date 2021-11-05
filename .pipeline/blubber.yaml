@@ -11,8 +11,6 @@ variants:
     copies: [local]
     apt: { packages: [git, build-essential, python-pkgconfig] }
     node: { requirements: [package.json] }
-    builder:
-    runs: { environment: { LINK: g++ } }
   development:
     includes: [build]
     apt: { packages: [ca-certificates] }
