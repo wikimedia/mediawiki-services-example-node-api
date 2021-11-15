@@ -25,7 +25,7 @@ metrics:
 #    port: 8125
 
 services:
-  - name: service-template-node
+  - name: example-node-api
     # a relative path or the name of an npm package, if different from name
     module: ./app.js
     # optionally, a version constraint of the npm package
@@ -36,7 +36,7 @@ services:
       # interface: localhost # uncomment to only listen on localhost
       # more per-service config settings
       # the location of the spec, defaults to spec.yaml if not specified
-      spec: ./spec.template.yaml
+      spec: ./spec.yaml
       # allow cross-domain requests to the API (default '*')
       cors: '*'
       # to disable use:
@@ -62,7 +62,7 @@ services:
       #   - user-agent
       #   - x-request-id
       # the user agent to use when issuing requests
-      # user_agent: service-template-node
+      # user_agent: example-node-api
       # max JSON POST body size limit
       # max_body_size: 100kb
       # the template used for contacting the MW API

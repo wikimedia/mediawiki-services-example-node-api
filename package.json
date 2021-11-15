@@ -1,7 +1,7 @@
 {
-	"name": "service-template-node",
+	"name": "example-node-api",
 	"version": "0.10.0",
-	"description": "A blueprint for MediaWiki REST API services",
+	"description": "A minimal example of a service based on Service Template Node",
 	"main": "./app.js",
 	"scripts": {
 		"start": "service-runner",
@@ -15,7 +15,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/wikimedia/service-template-node.git"
+		"url": "https://gerrit.wikimedia.org/r/mediawiki/services/example-node-api"
 	},
 	"keywords": [
 		"REST",
@@ -23,13 +23,13 @@
 		"service template",
 		"MediaWiki"
 	],
-	"author": "Wikimedia Service Team <services@lists.wikimedia.org>",
+	"author": "Platform Engineering Team <platform-engineering@wikimedia.org>",
 	"contributors": [],
 	"license": "Apache-2.0",
 	"bugs": {
-		"url": "https://phabricator.wikimedia.org/tag/service-template-node/"
+		"url": "https://phabricator.wikimedia.org/tag/api_platform/"
 	},
-	"homepage": "https://github.com/wikimedia/service-template-node",
+	"homepage": "https://gerrit.wikimedia.org/r/admin/repos/mediawiki/services/example-node-api",
 	"dependencies": {
 		"bluebird": "^3.5.5",
 		"body-parser": "^1.19.0",
