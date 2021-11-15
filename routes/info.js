@@ -14,10 +14,34 @@ let app;
 
 /**
  * GET /
- * Gets some basic info about this service
+ *
+ * @openapi
+ * /info:
+ *   get:
+ *     summary: API Information
+ *     description: Gets build/version information for the API
+ *     tags:
+ *       - Example API
+ *     responses:
+ *       200:
+ *          description: Success
+ *          content:
+ *            $ref: 'schema/definitions/Info.yaml'
+ *       404:
+ *         description: Not Found
+ *         content:
+ *           $ref: 'schema/definitions/Problem.yaml'
+ *       400:
+ *         description: Bad Request
+ *         content:
+ *           $ref: 'schema/definitions/Problem.yaml'
+ *       default:
+ *         description: Error
+ *         content:
+ *           $ref: 'schema/definitions/Problem.yaml'
+ *
  */
 router.get('/', (req, res) => {
-
     // simple sync return
     res.json({
         name: app.info.name,

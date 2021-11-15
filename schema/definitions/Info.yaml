@@ -1,0 +1,12 @@
+application/json:
+   schema:
+     type: object
+     properties:
+      name:
+        type: string
+      version:
+        type: string
+      description:
+        type: string
+      home:
+        type: string

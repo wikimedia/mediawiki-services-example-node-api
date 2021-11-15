@@ -13,6 +13,7 @@
 		],
 		"computed-property-spacing": "off",
 		"indent": ["off", 4],
+		"jsdoc/check-tag-names": ["error", { "definedTags": ["openapi"] }],
 		"no-multi-spaces": "off",
 		"no-shadow": "off",
 		"no-undefined": "off",

@@ -50,6 +50,18 @@ To execute tests, run:
 npm test
 ```
 
+### Documentation
+
+The Example Node API demonstrates how to keep your APIs documentation up to date.
+Each route definition should have an `@openapi` annotation with an OpenAPI-specification compliant YAML description. When updating or adding any routes, a git hook will execute
+
+```
+npm run doc
+```
+
+to ensure the OpenAPI spec in `/static/spec.json` is properly updated.
+
+
 ### Troubleshooting
 
 You can solve many issues by recreating the `node_modules` directory:
