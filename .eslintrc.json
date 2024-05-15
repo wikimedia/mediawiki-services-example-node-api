@@ -1,7 +1,6 @@
 {
 	"extends": [
-		"wikimedia/server",
-		"wikimedia/jsdoc"
+		"wikimedia/server"
 	],
 	"rules": {
 		"array-bracket-spacing": "off",
